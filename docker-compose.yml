@@ -42,6 +42,8 @@ x-volumes:
 services:
   taiga-db:
     image: postgres:12.3
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_DB: "taiga"
       POSTGRES_USER: "${POSTGRES_USER}"
